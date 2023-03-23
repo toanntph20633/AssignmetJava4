@@ -28,11 +28,27 @@ public class HomeServlet extends HttpServlet {
             this.quenMatKhau(request, response);
         } else if (uri.contains("san-pham")) {
             this.sanPham(request, response);
-        } else if (uri.contains("trang-chu")) {
+        } else if (uri.contains("gioi-thieu")) {
             this.gioiThieu(request, response);
+        } else if (uri.contains("dang-nhap")) {
+            this.viewDangNhap(request, response);
+        } else if (uri.contains("dang-ky")) {
+            this.viewDangKy(request, response);
         } else {
             this.trangChu(request, response);
         }
+    }
+
+    private void viewDangKy(HttpServletRequest request, HttpServletResponse response) {
+    }
+
+    private void viewDangNhap(HttpServletRequest request, HttpServletResponse response) {
+    }
+
+    private void dangKy(HttpServletRequest request, HttpServletResponse response) {
+    }
+
+    private void dangNhap(HttpServletRequest request, HttpServletResponse response) {
     }
 
     private void gioiThieu(HttpServletRequest request, HttpServletResponse response) {
