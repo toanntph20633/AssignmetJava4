@@ -1,5 +1,8 @@
 package com.example.assignmetjava4.controller;
 
+import com.example.assignmetjava4.entity.Account;
+import com.example.assignmetjava4.service.AccountService;
+import com.example.assignmetjava4.service.impl.AccountServiceImpl;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -12,9 +15,13 @@ import java.io.IOException;
         "/thong-tin-khach-hang",
         "/quen-mat-khau",
         "/san-pham",
-        "/gioi-thieu"
+        "/gioi-thieu",
+        "/dang-nhap",
+        "/dang-ky"
 })
 public class HomeServlet extends HttpServlet {
+    private static final AccountService ACCOUNT_SERVICE = new AccountServiceImpl();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String uri = request.getRequestURI();
@@ -42,19 +49,33 @@ public class HomeServlet extends HttpServlet {
     private void viewDangKy(HttpServletRequest request, HttpServletResponse response) {
     }
 
-    private void viewDangNhap(HttpServletRequest request, HttpServletResponse response) {
+    private void viewDangNhap(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/views/login/login.jsp").forward(request, response);
     }
 
     private void dangKy(HttpServletRequest request, HttpServletResponse response) {
     }
 
-    private void dangNhap(HttpServletRequest request, HttpServletResponse response) {
+    private void dangNhap(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String pass = request.getParameter("password");
+        try {
+            Account account = ACCOUNT_SERVICE.login(username, pass);
+            request.setAttribute("acc", account);
+            request.getRequestDispatcher("/views/page/home.jsp").forward(request, response);
+        } catch (Exception e) {
+            request.setAttribute("mess", e.getMessage());
+            request.getRequestDispatcher("/views/login/login.jsp").forward(request, response);
+        }
+
+
     }
 
     private void gioiThieu(HttpServletRequest request, HttpServletResponse response) {
     }
 
-    private void sanPham(HttpServletRequest request, HttpServletResponse response) {
+    private void sanPham(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/views/page/view-san-pham.jsp").forward(request, response);
     }
 
     private void quenMatKhau(HttpServletRequest request, HttpServletResponse response) {
@@ -66,11 +87,15 @@ public class HomeServlet extends HttpServlet {
     private void gioHang(HttpServletRequest request, HttpServletResponse response) {
     }
 
-    private void trangChu(HttpServletRequest request, HttpServletResponse response) {
+    private void trangChu(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/views/page/home.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String uri = request.getRequestURI();
+        if (uri.contains("dang-nhap")) {
+            this.dangNhap(request, response);
+        }
     }
 }

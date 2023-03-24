@@ -16778,83 +16778,83 @@
       <ObjectId>265</ObjectId>
       <Type>windows-login</Type>
     </login>
-    <role id="5551" parent="5510" name="public">
-      <AuthType>none</AuthType>
-      <ObjectId>0</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5552" parent="5510" name="dbo">
-      <AuthType>instance</AuthType>
-      <DefaultSchema>dbo</DefaultSchema>
-      <ObjectId>1</ObjectId>
-    </role>
-    <role id="5553" parent="5510" name="guest">
-      <AuthType>none</AuthType>
-      <DefaultSchema>guest</DefaultSchema>
-      <ObjectId>2</ObjectId>
-    </role>
-    <role id="5554" parent="5510" name="INFORMATION_SCHEMA">
+    <role id="5551" parent="5510" name="INFORMATION_SCHEMA">
       <AuthType>none</AuthType>
       <ObjectId>3</ObjectId>
     </role>
-    <role id="5555" parent="5510" name="sys">
-      <AuthType>none</AuthType>
-      <ObjectId>4</ObjectId>
-    </role>
-    <role id="5556" parent="5510" name="db_owner">
-      <AuthType>none</AuthType>
-      <ObjectId>16384</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5557" parent="5510" name="db_accessadmin">
+    <role id="5552" parent="5510" name="db_accessadmin">
       <AuthType>none</AuthType>
       <ObjectId>16385</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5558" parent="5510" name="db_securityadmin">
-      <AuthType>none</AuthType>
-      <ObjectId>16386</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5559" parent="5510" name="db_ddladmin">
-      <AuthType>none</AuthType>
-      <ObjectId>16387</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5560" parent="5510" name="db_backupoperator">
+    <role id="5553" parent="5510" name="db_backupoperator">
       <AuthType>none</AuthType>
       <ObjectId>16389</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5561" parent="5510" name="db_datareader">
+    <role id="5554" parent="5510" name="db_datareader">
       <AuthType>none</AuthType>
       <ObjectId>16390</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5562" parent="5510" name="db_datawriter">
+    <role id="5555" parent="5510" name="db_datawriter">
       <AuthType>none</AuthType>
       <ObjectId>16391</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5563" parent="5510" name="db_denydatareader">
+    <role id="5556" parent="5510" name="db_ddladmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16387</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5557" parent="5510" name="db_denydatareader">
       <AuthType>none</AuthType>
       <ObjectId>16392</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5564" parent="5510" name="db_denydatawriter">
+    <role id="5558" parent="5510" name="db_denydatawriter">
       <AuthType>none</AuthType>
       <ObjectId>16393</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
+    </role>
+    <role id="5559" parent="5510" name="db_owner">
+      <AuthType>none</AuthType>
+      <ObjectId>16384</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5560" parent="5510" name="db_securityadmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16386</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5561" parent="5510" name="dbo">
+      <AuthType>instance</AuthType>
+      <DefaultSchema>dbo</DefaultSchema>
+      <ObjectId>1</ObjectId>
+    </role>
+    <role id="5562" parent="5510" name="guest">
+      <AuthType>none</AuthType>
+      <DefaultSchema>guest</DefaultSchema>
+      <ObjectId>2</ObjectId>
+    </role>
+    <role id="5563" parent="5510" name="public">
+      <AuthType>none</AuthType>
+      <ObjectId>0</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5564" parent="5510" name="sys">
+      <AuthType>none</AuthType>
+      <ObjectId>4</ObjectId>
     </role>
     <schema id="5565" parent="5510" name="INFORMATION_SCHEMA">
       <ObjectId>3</ObjectId>
@@ -16888,7 +16888,7 @@
     </schema>
     <schema id="5575" parent="5510" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2023-03-23.17:36:07.873</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-03-24.06:31:47.543</IntrospectionTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
     <schema id="5576" parent="5510" name="guest">
@@ -16932,45 +16932,55 @@
       <ModifiedTimestamp>2023-03-23.18:46:10.103</ModifiedTimestamp>
       <ObjectId>1541580530</ObjectId>
     </table>
-    <column id="5585" parent="5578" name="id">
+    <table id="5585" parent="5575" name="shopping_cart">
+      <CreatedTimestamp>2023-03-23.18:42:31.370</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-23.18:46:10.103</ModifiedTimestamp>
+      <ObjectId>1669580986</ObjectId>
+    </table>
+    <table id="5586" parent="5575" name="shopping_cart_detail">
+      <CreatedTimestamp>2023-03-23.18:46:10.100</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-23.18:46:10.100</ModifiedTimestamp>
+      <ObjectId>1733581214</ObjectId>
+    </table>
+    <column id="5587" parent="5578" name="id">
       <DasType>uniqueidentifier|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <DefaultConstraintId>1461580245</DefaultConstraintId>
       <DefaultConstraintName>DF__Bill__id__571DF1D5</DefaultConstraintName>
     </column>
-    <column id="5586" parent="5578" name="bill_code">
+    <column id="5588" parent="5578" name="bill_code">
       <DasType>varchar(100 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5587" parent="5578" name="id_customer">
+    <column id="5589" parent="5578" name="id_customer">
       <DasType>uniqueidentifier|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5588" parent="5578" name="date_create">
+    <column id="5590" parent="5578" name="date_create">
       <DasType>date|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5589" parent="5578" name="status">
+    <column id="5591" parent="5578" name="status">
       <DasType>int|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5590" parent="5578" name="price">
+    <column id="5592" parent="5578" name="price">
       <DasType>decimal(18)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5591" parent="5578" name="price_sale">
+    <column id="5593" parent="5578" name="price_sale">
       <DasType>decimal(18)|0s</DasType>
       <Position>7</Position>
     </column>
-    <default id="5592" parent="5578" name="DF__Bill__id__571DF1D5">
+    <default id="5594" parent="5578" name="DF__Bill__id__571DF1D5">
       <ColNames>id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2023-03-23.17:10:26</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1461580245</ObjectId>
     </default>
-    <foreign-key id="5593" parent="5578" name="Bill_custommer_id_fk">
+    <foreign-key id="5595" parent="5578" name="Bill_custommer_id_fk">
       <ColNames>id_customer</ColNames>
       <CreatedTimestamp>2023-03-23.17:10:26</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.17:10:26</ModifiedTimestamp>
@@ -16979,61 +16989,61 @@
       <RefTableId>997578592</RefTableId>
       <RefTableName>customer</RefTableName>
     </foreign-key>
-    <index id="5594" parent="5578" name="Bill_pk">
+    <index id="5596" parent="5578" name="Bill_pk">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5595" parent="5578" name="Bill_pk2">
+    <index id="5597" parent="5578" name="Bill_pk2">
       <ColNames>bill_code</ColNames>
       <Position>2</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5596" parent="5578" name="Bill_pk">
+    <key id="5598" parent="5578" name="Bill_pk">
       <CreatedTimestamp>2023-03-23.17:10:26</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.17:10:26</ModifiedTimestamp>
       <ObjectId>1429580131</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>Bill_pk</UnderlyingIndexName>
     </key>
-    <key id="5597" parent="5578" name="Bill_pk2">
+    <key id="5599" parent="5578" name="Bill_pk2">
       <CreatedTimestamp>2023-03-23.17:10:26</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.17:10:26</ModifiedTimestamp>
       <ObjectId>1445580188</ObjectId>
       <UnderlyingIndexName>Bill_pk2</UnderlyingIndexName>
     </key>
-    <column id="5598" parent="5579" name="id">
+    <column id="5600" parent="5579" name="id">
       <DasType>uniqueidentifier|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <DefaultConstraintId>1253579504</DefaultConstraintId>
       <DefaultConstraintName>DF__account__id__4AB81AF0</DefaultConstraintName>
     </column>
-    <column id="5599" parent="5579" name="username">
+    <column id="5601" parent="5579" name="username">
       <DasType>nvarchar(500 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5600" parent="5579" name="password">
+    <column id="5602" parent="5579" name="password">
       <DasType>varchar(1000 char)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5601" parent="5579" name="customer_id">
+    <column id="5603" parent="5579" name="customer_id">
       <DasType>uniqueidentifier|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5602" parent="5579" name="status">
+    <column id="5604" parent="5579" name="status">
       <DasType>int|0s</DasType>
       <Position>5</Position>
     </column>
-    <default id="5603" parent="5579" name="DF__account__id__4AB81AF0">
+    <default id="5605" parent="5579" name="DF__account__id__4AB81AF0">
       <ColNames>id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2023-03-23.16:35:01.227</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1253579504</ObjectId>
     </default>
-    <foreign-key id="5604" parent="5579" name="account___fk">
+    <foreign-key id="5606" parent="5579" name="account___fk">
       <ColNames>customer_id</ColNames>
       <CreatedTimestamp>2023-03-23.16:35:01.227</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.16:35:01.227</ModifiedTimestamp>
@@ -17042,59 +17052,59 @@
       <RefTableId>997578592</RefTableId>
       <RefTableName>customer</RefTableName>
     </foreign-key>
-    <index id="5605" parent="5579" name="account_pk">
+    <index id="5607" parent="5579" name="account_pk">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5606" parent="5579" name="UQ__account__CD65CB84A1C3AE14">
+    <index id="5608" parent="5579" name="UQ__account__CD65CB84A1C3AE14">
       <ColNames>customer_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Position>2</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5607" parent="5579" name="account_pk">
+    <key id="5609" parent="5579" name="account_pk">
       <CreatedTimestamp>2023-03-23.16:35:01.227</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.16:35:01.227</ModifiedTimestamp>
       <ObjectId>1221579390</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>account_pk</UnderlyingIndexName>
     </key>
-    <key id="5608" parent="5579" name="UQ__account__CD65CB84A1C3AE14">
+    <key id="5610" parent="5579" name="UQ__account__CD65CB84A1C3AE14">
       <CreatedTimestamp>2023-03-23.16:35:01.227</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.16:35:01.227</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1237579447</ObjectId>
       <UnderlyingIndexName>UQ__account__CD65CB84A1C3AE14</UnderlyingIndexName>
     </key>
-    <column id="5609" parent="5580" name="laptop_detail_id">
+    <column id="5611" parent="5580" name="laptop_detail_id">
       <DasType>uniqueidentifier|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="5610" parent="5580" name="bill_id">
+    <column id="5612" parent="5580" name="bill_id">
       <DasType>uniqueidentifier|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5611" parent="5580" name="id">
+    <column id="5613" parent="5580" name="id">
       <DasType>uniqueidentifier|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <DefaultConstraintId>1653580929</DefaultConstraintId>
       <DefaultConstraintName>DF__bill_detail__id__628FA481</DefaultConstraintName>
     </column>
-    <column id="5612" parent="5580" name="status">
+    <column id="5614" parent="5580" name="status">
       <DasType>int|0s</DasType>
       <Position>4</Position>
     </column>
-    <default id="5613" parent="5580" name="DF__bill_detail__id__628FA481">
+    <default id="5615" parent="5580" name="DF__bill_detail__id__628FA481">
       <ColNames>id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2023-03-23.17:19:39.310</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1653580929</ObjectId>
     </default>
-    <foreign-key id="5614" parent="5580" name="bill_detail_laptop_detail_id_fk">
+    <foreign-key id="5616" parent="5580" name="bill_detail_laptop_detail_id_fk">
       <ColNames>laptop_detail_id</ColNames>
       <CreatedTimestamp>2023-03-23.17:19:39.310</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.17:19:39.310</ModifiedTimestamp>
@@ -17103,7 +17113,7 @@
       <RefTableId>1541580530</RefTableId>
       <RefTableName>laptop_detail</RefTableName>
     </foreign-key>
-    <foreign-key id="5615" parent="5580" name="bill_detail_Bill_id_fk">
+    <foreign-key id="5617" parent="5580" name="bill_detail_Bill_id_fk">
       <ColNames>bill_id</ColNames>
       <CreatedTimestamp>2023-03-23.17:19:39.310</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.17:19:39.310</ModifiedTimestamp>
@@ -17112,116 +17122,116 @@
       <RefTableId>1413580074</RefTableId>
       <RefTableName>Bill</RefTableName>
     </foreign-key>
-    <index id="5616" parent="5580" name="bill_detail_pk">
+    <index id="5618" parent="5580" name="bill_detail_pk">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5617" parent="5580" name="bill_detail_pk">
+    <key id="5619" parent="5580" name="bill_detail_pk">
       <CreatedTimestamp>2023-03-23.17:19:39.310</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.17:19:39.310</ModifiedTimestamp>
       <ObjectId>1605580758</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>bill_detail_pk</UnderlyingIndexName>
     </key>
-    <column id="5618" parent="5581" name="id">
+    <column id="5620" parent="5581" name="id">
       <DasType>uniqueidentifier|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <DefaultConstraintId>1317579732</DefaultConstraintId>
       <DefaultConstraintName>DF__brand__id__4E88ABD4</DefaultConstraintName>
     </column>
-    <column id="5619" parent="5581" name="brand_code">
+    <column id="5621" parent="5581" name="brand_code">
       <DasType>varchar(200 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5620" parent="5581" name="brand_name">
+    <column id="5622" parent="5581" name="brand_name">
       <DasType>nvarchar(500 char)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5621" parent="5581" name="status">
+    <column id="5623" parent="5581" name="status">
       <DasType>int|0s</DasType>
       <Position>4</Position>
     </column>
-    <default id="5622" parent="5581" name="DF__brand__id__4E88ABD4">
+    <default id="5624" parent="5581" name="DF__brand__id__4E88ABD4">
       <ColNames>id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2023-03-23.16:55:03.953</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1317579732</ObjectId>
     </default>
-    <index id="5623" parent="5581" name="brand_pk">
+    <index id="5625" parent="5581" name="brand_pk">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5624" parent="5581" name="brand_pk">
+    <key id="5626" parent="5581" name="brand_pk">
       <CreatedTimestamp>2023-03-23.16:55:03.953</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.16:55:03.953</ModifiedTimestamp>
       <ObjectId>1301579675</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>brand_pk</UnderlyingIndexName>
     </key>
-    <column id="5625" parent="5582" name="id">
+    <column id="5627" parent="5582" name="id">
       <DasType>uniqueidentifier|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <DefaultConstraintId>1061578820</DefaultConstraintId>
       <DefaultConstraintName>DF__custommer__id__3F466844</DefaultConstraintName>
     </column>
-    <column id="5626" parent="5582" name="cus_name">
+    <column id="5628" parent="5582" name="cus_name">
       <DasType>nvarchar(100 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5627" parent="5582" name="email">
+    <column id="5629" parent="5582" name="email">
       <DasType>nvarchar(500 char)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5628" parent="5582" name="phone">
+    <column id="5630" parent="5582" name="phone">
       <DasType>varchar(20 char)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5629" parent="5582" name="sex">
+    <column id="5631" parent="5582" name="sex">
       <DasType>bit|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5630" parent="5582" name="age">
+    <column id="5632" parent="5582" name="age">
       <DasType>int|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5631" parent="5582" name="cus_address">
+    <column id="5633" parent="5582" name="cus_address">
       <DasType>nvarchar(1000 char)|0s</DasType>
       <Position>7</Position>
     </column>
-    <default id="5632" parent="5582" name="DF__custommer__id__3F466844">
+    <default id="5634" parent="5582" name="DF__custommer__id__3F466844">
       <ColNames>id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2023-03-23.01:07:25.457</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1061578820</ObjectId>
     </default>
-    <index id="5633" parent="5582" name="PK__customme__3213E83FAA247C20">
+    <index id="5635" parent="5582" name="PK__customme__3213E83FAA247C20">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5634" parent="5582" name="UQ__customme__B43B145F95733D66">
+    <index id="5636" parent="5582" name="UQ__customme__B43B145F95733D66">
       <ColNames>phone</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Position>2</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5635" parent="5582" name="UQ__customme__AB6E6164D8830210">
+    <index id="5637" parent="5582" name="UQ__customme__AB6E6164D8830210">
       <ColNames>email</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Position>3</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5636" parent="5582" name="PK__customme__3213E83FAA247C20">
+    <key id="5638" parent="5582" name="PK__customme__3213E83FAA247C20">
       <CreatedTimestamp>2023-03-23.01:07:25.457</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.01:07:25.457</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17229,63 +17239,63 @@
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__customme__3213E83FAA247C20</UnderlyingIndexName>
     </key>
-    <key id="5637" parent="5582" name="UQ__customme__AB6E6164D8830210">
+    <key id="5639" parent="5582" name="UQ__customme__AB6E6164D8830210">
       <CreatedTimestamp>2023-03-23.01:07:25.457</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.01:07:25.457</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1045578763</ObjectId>
       <UnderlyingIndexName>UQ__customme__AB6E6164D8830210</UnderlyingIndexName>
     </key>
-    <key id="5638" parent="5582" name="UQ__customme__B43B145F95733D66">
+    <key id="5640" parent="5582" name="UQ__customme__B43B145F95733D66">
       <CreatedTimestamp>2023-03-23.01:07:25.457</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.01:07:25.457</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1029578706</ObjectId>
       <UnderlyingIndexName>UQ__customme__B43B145F95733D66</UnderlyingIndexName>
     </key>
-    <column id="5639" parent="5583" name="id">
+    <column id="5641" parent="5583" name="id">
       <DasType>uniqueidentifier|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <DefaultConstraintId>1381579960</DefaultConstraintId>
       <DefaultConstraintName>DF__laptop__id__52593CB8</DefaultConstraintName>
     </column>
-    <column id="5640" parent="5583" name="latop_code">
+    <column id="5642" parent="5583" name="latop_code">
       <DasType>varchar(100 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5641" parent="5583" name="laptop_name">
+    <column id="5643" parent="5583" name="laptop_name">
       <DasType>nvarchar(500 char)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5642" parent="5583" name="price">
+    <column id="5644" parent="5583" name="price">
       <DasType>decimal(18)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5643" parent="5583" name="quantity">
+    <column id="5645" parent="5583" name="quantity">
       <DasType>int|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5644" parent="5583" name="status">
+    <column id="5646" parent="5583" name="status">
       <DasType>int|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5645" parent="5583" name="brand_id">
+    <column id="5647" parent="5583" name="brand_id">
       <DasType>uniqueidentifier|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="5646" parent="5583" name="description">
+    <column id="5648" parent="5583" name="description">
       <DasType>nvarchar(1000 char)|0s</DasType>
       <Position>8</Position>
     </column>
-    <default id="5647" parent="5583" name="DF__laptop__id__52593CB8">
+    <default id="5649" parent="5583" name="DF__laptop__id__52593CB8">
       <ColNames>id</ColNames>
       <DefaultExpression>newid()</DefaultExpression>
       <ModifiedTimestamp>2023-03-23.16:59:45.117</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1381579960</ObjectId>
     </default>
-    <foreign-key id="5648" parent="5583" name="laptop_brand_id_fk">
+    <foreign-key id="5650" parent="5583" name="laptop_brand_id_fk">
       <ColNames>brand_id</ColNames>
       <CreatedTimestamp>2023-03-23.16:59:45.120</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.16:59:45.120</ModifiedTimestamp>
@@ -17294,44 +17304,44 @@
       <RefTableId>1285579618</RefTableId>
       <RefTableName>brand</RefTableName>
     </foreign-key>
-    <index id="5649" parent="5583" name="laptop_pk">
+    <index id="5651" parent="5583" name="laptop_pk">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5650" parent="5583" name="laptop_pk2">
+    <index id="5652" parent="5583" name="laptop_pk2">
       <ColNames>latop_code</ColNames>
       <Position>2</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5651" parent="5583" name="laptop_pk">
+    <key id="5653" parent="5583" name="laptop_pk">
       <CreatedTimestamp>2023-03-23.16:59:45.117</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.16:59:45.117</ModifiedTimestamp>
       <ObjectId>1349579846</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>laptop_pk</UnderlyingIndexName>
     </key>
-    <key id="5652" parent="5583" name="laptop_pk2">
+    <key id="5654" parent="5583" name="laptop_pk2">
       <CreatedTimestamp>2023-03-23.16:59:45.117</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.16:59:45.117</ModifiedTimestamp>
       <ObjectId>1365579903</ObjectId>
       <UnderlyingIndexName>laptop_pk2</UnderlyingIndexName>
     </key>
-    <column id="5653" parent="5584" name="id">
+    <column id="5655" parent="5584" name="id">
       <DasType>uniqueidentifier|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="5654" parent="5584" name="laptop_detail_code">
+    <column id="5656" parent="5584" name="laptop_detail_code">
       <DasType>varchar(200 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5655" parent="5584" name="laptop_id">
+    <column id="5657" parent="5584" name="laptop_id">
       <DasType>uniqueidentifier|0s</DasType>
       <Position>3</Position>
     </column>
-    <foreign-key id="5656" parent="5584" name="laptop_detail_laptop_id_fk">
+    <foreign-key id="5658" parent="5584" name="laptop_detail_laptop_id_fk">
       <ColNames>laptop_id</ColNames>
       <CreatedTimestamp>2023-03-23.17:13:00.613</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.17:13:00.613</ModifiedTimestamp>
@@ -17340,18 +17350,119 @@
       <RefTableId>1333579789</RefTableId>
       <RefTableName>laptop</RefTableName>
     </foreign-key>
-    <index id="5657" parent="5584" name="laptop_detail_pk">
+    <index id="5659" parent="5584" name="laptop_detail_pk">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5658" parent="5584" name="laptop_detail_pk">
+    <key id="5660" parent="5584" name="laptop_detail_pk">
       <CreatedTimestamp>2023-03-23.17:13:00.613</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-23.17:13:00.613</ModifiedTimestamp>
       <ObjectId>1557580587</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>laptop_detail_pk</UnderlyingIndexName>
+    </key>
+    <column id="5661" parent="5585" name="id">
+      <DasType>uniqueidentifier|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <DefaultConstraintId>1701581100</DefaultConstraintId>
+      <DefaultConstraintName>DF__shopping_car__id__656C112C</DefaultConstraintName>
+    </column>
+    <column id="5662" parent="5585" name="customer_id">
+      <DasType>uniqueidentifier|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="5663" parent="5585" name="create_date">
+      <DasType>date|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="5664" parent="5585" name="status">
+      <DasType>int|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <default id="5665" parent="5585" name="DF__shopping_car__id__656C112C">
+      <ColNames>id</ColNames>
+      <DefaultExpression>newid()</DefaultExpression>
+      <ModifiedTimestamp>2023-03-23.18:42:31.370</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1701581100</ObjectId>
+    </default>
+    <foreign-key id="5666" parent="5585" name="shopping_cart_customer_id_fk">
+      <ColNames>customer_id</ColNames>
+      <CreatedTimestamp>2023-03-23.18:42:31.370</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-23.18:42:31.370</ModifiedTimestamp>
+      <ObjectId>1717581157</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefTableId>997578592</RefTableId>
+      <RefTableName>customer</RefTableName>
+    </foreign-key>
+    <index id="5667" parent="5585" name="shopping_cart_pk">
+      <Clustering>1</Clustering>
+      <ColNames>id</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="5668" parent="5585" name="shopping_cart_pk">
+      <CreatedTimestamp>2023-03-23.18:42:31.370</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-23.18:42:31.370</ModifiedTimestamp>
+      <ObjectId>1685581043</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>shopping_cart_pk</UnderlyingIndexName>
+    </key>
+    <column id="5669" parent="5586" name="id">
+      <DasType>uniqueidentifier|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <DefaultConstraintId>1765581328</DefaultConstraintId>
+      <DefaultConstraintName>DF__shopping_car__id__693CA210</DefaultConstraintName>
+    </column>
+    <column id="5670" parent="5586" name="shopping_cart_id">
+      <DasType>uniqueidentifier|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="5671" parent="5586" name="laptop_detail_id">
+      <DasType>uniqueidentifier|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <default id="5672" parent="5586" name="DF__shopping_car__id__693CA210">
+      <ColNames>id</ColNames>
+      <DefaultExpression>newid()</DefaultExpression>
+      <ModifiedTimestamp>2023-03-23.18:46:10.103</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1765581328</ObjectId>
+    </default>
+    <foreign-key id="5673" parent="5586" name="shopping_cart_detail_shopping_cart_id_fk">
+      <ColNames>shopping_cart_id</ColNames>
+      <CreatedTimestamp>2023-03-23.18:46:10.103</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-23.18:46:10.103</ModifiedTimestamp>
+      <ObjectId>1781581385</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefTableId>1669580986</RefTableId>
+      <RefTableName>shopping_cart</RefTableName>
+    </foreign-key>
+    <foreign-key id="5674" parent="5586" name="shopping_cart_detail_laptop_detail_id_fk">
+      <ColNames>laptop_detail_id</ColNames>
+      <CreatedTimestamp>2023-03-23.18:46:10.103</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-23.18:46:10.103</ModifiedTimestamp>
+      <ObjectId>1797581442</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefTableId>1541580530</RefTableId>
+      <RefTableName>laptop_detail</RefTableName>
+    </foreign-key>
+    <index id="5675" parent="5586" name="shopping_cart_detail_pk">
+      <Clustering>1</Clustering>
+      <ColNames>id</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="5676" parent="5586" name="shopping_cart_detail_pk">
+      <CreatedTimestamp>2023-03-23.18:46:10.100</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-23.18:46:10.100</ModifiedTimestamp>
+      <ObjectId>1749581271</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>shopping_cart_detail_pk</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
