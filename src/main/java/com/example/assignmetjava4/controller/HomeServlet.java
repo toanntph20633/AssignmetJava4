@@ -2,7 +2,9 @@ package com.example.assignmetjava4.controller;
 
 import com.example.assignmetjava4.entity.Account;
 import com.example.assignmetjava4.service.AccountService;
+import com.example.assignmetjava4.service.LaptopService;
 import com.example.assignmetjava4.service.impl.AccountServiceImpl;
+import com.example.assignmetjava4.service.impl.LaptopServiceImpl;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -17,10 +19,12 @@ import java.io.IOException;
         "/san-pham",
         "/gioi-thieu",
         "/dang-nhap",
-        "/dang-ky"
+        "/dang-ky",
+        "/chi-tiet"
 })
 public class HomeServlet extends HttpServlet {
     private static final AccountService ACCOUNT_SERVICE = new AccountServiceImpl();
+    private static final LaptopService LAPTOP_SERVICE = new LaptopServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -41,9 +45,17 @@ public class HomeServlet extends HttpServlet {
             this.viewDangNhap(request, response);
         } else if (uri.contains("dang-ky")) {
             this.viewDangKy(request, response);
+        }else if (uri.contains("chi-tiet")) {
+            this.viewChiTiet(request, response);
         } else {
             this.trangChu(request, response);
         }
+    }
+
+    private void viewChiTiet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String id = request.getParameter("id");
+        request.setAttribute("laptop",LAPTOP_SERVICE.getOne(id));
+        request.getRequestDispatcher("/views/page/view-chi-tiet-sp.jsp").forward(request,response);
     }
 
     private void viewDangKy(HttpServletRequest request, HttpServletResponse response) {
@@ -61,7 +73,8 @@ public class HomeServlet extends HttpServlet {
         String pass = request.getParameter("password");
         try {
             Account account = ACCOUNT_SERVICE.login(username, pass);
-            request.setAttribute("acc", account);
+            HttpSession session = request.getSession();
+            session.setAttribute("acc", account);
             request.getRequestDispatcher("/views/page/home.jsp").forward(request, response);
         } catch (Exception e) {
             request.setAttribute("mess", e.getMessage());
@@ -75,7 +88,9 @@ public class HomeServlet extends HttpServlet {
     }
 
     private void sanPham(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/views/page/view-san-pham.jsp").forward(request, response);
+        int page = Integer.parseInt(request.getParameter("page"));
+        request.setAttribute("listLaptop",LAPTOP_SERVICE.getAll(page));
+                request.getRequestDispatcher("/views/page/view-san-pham.jsp").forward(request, response);
     }
 
     private void quenMatKhau(HttpServletRequest request, HttpServletResponse response) {

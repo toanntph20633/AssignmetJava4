@@ -4,6 +4,7 @@ import com.example.assignmetjava4.utilities.LaptopStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.Set;
 
 @Entity(name = "laptop")
@@ -21,7 +22,7 @@ public class Laptop {
     @Column(name = "laptop_name")
     private String laptopName;
     @Column(name = "price")
-    private String price;
+    private BigDecimal price;
     @Column(name = "quantity")
     private String quantity;
     @ManyToOne
@@ -31,6 +32,22 @@ public class Laptop {
     private LaptopStatus status;
     @Column(name = "description")
     private String description;
+    @Column(name = "images")
+    private String images;
     @OneToMany(mappedBy = "laptopId", fetch = FetchType.LAZY)
     private Set<LaptopDetail> laptopDetails;
+
+    @Override
+    public String toString() {
+        return "Laptop{" +
+                "id='" + id + '\'' +
+                ", laptopCode='" + laptopCode + '\'' +
+                ", laptopName='" + laptopName + '\'' +
+                ", price='" + price + '\'' +
+                ", quantity='" + quantity + '\'' +
+                ", brandId=" + brandId +
+                ", status=" + status +
+                ", description='" + description + '\'' +
+                '}' + "\n";
+    }
 }

@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-<div class="d-flex flex-column h-100">
+<div class="d-flex flex-column ">
     <!-- FOOTER -->
     <footer class="w-100 py-4 flex-shrink-0">
         <div class="container py-4">

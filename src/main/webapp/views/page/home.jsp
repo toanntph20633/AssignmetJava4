@@ -11,16 +11,12 @@
     <title>Title</title>
 </head>
 <body>
-<jsp:include page="../layout/header.jsp">
-    <jsp:param name="username" value="${acc.userName}"/>
-    <jsp:param name="password" value="${acc.password}"/>
-    <jsp:param name="customerId" value="${acc.customerId.id}"/>
-</jsp:include>
+<jsp:include page="../layout/header.jsp"></jsp:include>
 <jsp:include page="../layout/back.jsp"></jsp:include>
 <div class="row text-center mt-4">
     <div class="h1">CÁC SẢN PHẨM CỦA CHÚNG TÔI</div>
     <div class="col ">
-        <a href="/san-pham">
+        <a href="/san-pham?page=1">
             <div class="card" style="width: 18rem; border: none">
                 <img src="https://synnexfpt.com/wp-content/uploads/2022/11/D42661C1-859E-44D0-924A-51A7978B12E0.png"
                      alt="...">
@@ -32,7 +28,7 @@
 
     </div>
     <div class="col ">
-        <a href="/san-pham">
+        <a href="/san-pham?page=1">
             <div class="card" style="width: 18rem; border: none">
                 <img src="https://synnexfpt.com/wp-content/uploads/2022/11/D42661C1-859E-44D0-924A-51A7978B12E0.png"
                      alt="...">
@@ -44,7 +40,7 @@
 
     </div>
     <div class="col ">
-        <a href="/san-pham">
+        <a href="/san-pham?page=1">
             <div class="card" style="width: 18rem; border: none">
                 <img src="https://synnexfpt.com/wp-content/uploads/2022/11/D42661C1-859E-44D0-924A-51A7978B12E0.png"
                      alt="...">
@@ -56,7 +52,7 @@
 
     </div>
     <div class="col ">
-        <a href="/san-pham">
+        <a href="/san-pham?page=1">
             <div class="card" style="width: 18rem; border: none">
                 <img src="https://synnexfpt.com/wp-content/uploads/2022/11/D42661C1-859E-44D0-924A-51A7978B12E0.png"
                      alt="...">
