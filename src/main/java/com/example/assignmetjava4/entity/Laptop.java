@@ -3,6 +3,7 @@ package com.example.assignmetjava4.entity;
 import com.example.assignmetjava4.utilities.LaptopStatus;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 
 import java.math.BigDecimal;
 import java.util.Set;
@@ -15,7 +16,9 @@ import java.util.Set;
 @Builder
 public class Laptop {
     @Id
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "org.hibernate.id.UUIDGenerator")
+    @Column(name = "id")
     private String id;
     @Column(name = "laptop_code")
     private String laptopCode;
@@ -23,19 +26,18 @@ public class Laptop {
     private String laptopName;
     @Column(name = "price")
     private BigDecimal price;
-    @Column(name = "quantity")
-    private String quantity;
     @ManyToOne
     @JoinColumn(name = "brand_id")
     private Brand brandId;
     @Column(name = "status")
+    @Enumerated(EnumType.ORDINAL)
     private LaptopStatus status;
     @Column(name = "description")
     private String description;
     @Column(name = "images")
     private String images;
-    @OneToMany(mappedBy = "laptopId", fetch = FetchType.LAZY)
-    private Set<LaptopDetail> laptopDetails;
+//    @OneToMany(mappedBy = "laptopId", fetch = FetchType.LAZY)
+//    private Set<LaptopDetail> laptopDetails;
 
     @Override
     public String toString() {
@@ -44,7 +46,6 @@ public class Laptop {
                 ", laptopCode='" + laptopCode + '\'' +
                 ", laptopName='" + laptopName + '\'' +
                 ", price='" + price + '\'' +
-                ", quantity='" + quantity + '\'' +
                 ", brandId=" + brandId +
                 ", status=" + status +
                 ", description='" + description + '\'' +

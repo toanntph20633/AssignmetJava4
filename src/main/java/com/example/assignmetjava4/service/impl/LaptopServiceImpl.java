@@ -1,6 +1,8 @@
 package com.example.assignmetjava4.service.impl;
 
 import com.example.assignmetjava4.entity.Laptop;
+import com.example.assignmetjava4.entity.Role;
+import com.example.assignmetjava4.entity.RoleAccount;
 import com.example.assignmetjava4.repository.LaptopRepository;
 import com.example.assignmetjava4.repository.impl.LaptopRepositoryImpl;
 import com.example.assignmetjava4.service.LaptopService;
@@ -14,20 +16,19 @@ public class LaptopServiceImpl implements LaptopService {
     @Override
     public List<Laptop> getAll(int page) {
         int size = 10;
-        page = page -1;
+        page = page - 1;
         List<Laptop> list = new ArrayList<>();
         while (true) {
-            list = LAPTOP_REPOSITORY.getAll( page* size, size);
-            if(list == null){
+            list = LAPTOP_REPOSITORY.getAll(page * size, size);
+            if (list == null || list.isEmpty()) {
                 size--;
+                if (size < 0) {
+                    break;
+                }
                 continue;
             }
-            if (size < 0) {
-                break;
-            }
-            if (!list.isEmpty()) {
-                break;
-            }
+            break;
+
         }
         return list;
     }
@@ -35,5 +36,14 @@ public class LaptopServiceImpl implements LaptopService {
     @Override
     public Laptop getOne(String id) {
         return LAPTOP_REPOSITORY.getOne(id);
+    }
+
+    @Override
+    public List<Laptop> getAll() {
+        return LAPTOP_REPOSITORY.getAll();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new LaptopServiceImpl().getAll(1));
     }
 }

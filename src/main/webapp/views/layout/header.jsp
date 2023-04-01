@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Admin
@@ -42,6 +43,9 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
+                        <c:if test="${role.roleName == 'admin'}">
+                            <li><a class="dropdown-item" href="/quan-ly">Quản lý/a></li>
+                        </c:if>
                         <li><a class="dropdown-item" href="/dang-xuat">Đăng xuất</a></li>
                     </ul>
                 </li>

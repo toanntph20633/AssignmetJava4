@@ -20,7 +20,9 @@ import java.io.IOException;
         "/gioi-thieu",
         "/dang-nhap",
         "/dang-ky",
-        "/chi-tiet"
+        "/chi-tiet",
+        "/dang-xuat",
+        "/quan-ly",
 })
 public class HomeServlet extends HttpServlet {
     private static final AccountService ACCOUNT_SERVICE = new AccountServiceImpl();
@@ -45,17 +47,33 @@ public class HomeServlet extends HttpServlet {
             this.viewDangNhap(request, response);
         } else if (uri.contains("dang-ky")) {
             this.viewDangKy(request, response);
-        }else if (uri.contains("chi-tiet")) {
+        } else if (uri.contains("chi-tiet")) {
             this.viewChiTiet(request, response);
+        } else if (uri.contains("dang-xuat")) {
+            this.dangXuat(request, response);
+        } else if (uri.contains("quan-ly")) {
+            this.quanLy(request, response);
         } else {
             this.trangChu(request, response);
         }
     }
 
+    private void quanLy(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/views/page/view-quan-ly.jsp").forward(request, response);
+    }
+
+    private void dangXuat(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        session.setAttribute("acc", null);
+        session.setAttribute("role", null);
+        response.sendRedirect("/dang-nhap");
+
+    }
+
     private void viewChiTiet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id");
-        request.setAttribute("laptop",LAPTOP_SERVICE.getOne(id));
-        request.getRequestDispatcher("/views/page/view-chi-tiet-sp.jsp").forward(request,response);
+        request.setAttribute("laptop", LAPTOP_SERVICE.getOne(id));
+        request.getRequestDispatcher("/views/page/view-chi-tiet-sp.jsp").forward(request, response);
     }
 
     private void viewDangKy(HttpServletRequest request, HttpServletResponse response) {
@@ -75,6 +93,7 @@ public class HomeServlet extends HttpServlet {
             Account account = ACCOUNT_SERVICE.login(username, pass);
             HttpSession session = request.getSession();
             session.setAttribute("acc", account);
+            session.setAttribute("role", ACCOUNT_SERVICE.getAdmin(account.getId()));
             request.getRequestDispatcher("/views/page/home.jsp").forward(request, response);
         } catch (Exception e) {
             request.setAttribute("mess", e.getMessage());
@@ -89,8 +108,8 @@ public class HomeServlet extends HttpServlet {
 
     private void sanPham(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int page = Integer.parseInt(request.getParameter("page"));
-        request.setAttribute("listLaptop",LAPTOP_SERVICE.getAll(page));
-                request.getRequestDispatcher("/views/page/view-san-pham.jsp").forward(request, response);
+        request.setAttribute("listLaptop", LAPTOP_SERVICE.getAll(page));
+        request.getRequestDispatcher("/views/page/view-san-pham.jsp").forward(request, response);
     }
 
     private void quenMatKhau(HttpServletRequest request, HttpServletResponse response) {

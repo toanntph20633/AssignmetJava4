@@ -7,4 +7,5 @@ import java.util.List;
 public interface LaptopRepository {
     List<Laptop> getAll(int page,int size);
     Laptop getOne(String id);
+    List<Laptop> getAll();
 }

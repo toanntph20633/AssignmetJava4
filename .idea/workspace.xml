@@ -10,31 +10,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5696c9b7-ec8c-446e-b6d2-22c4f7179d82" name="Changes" comment="done">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/controller/QanLySanPhamController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/repository/impl/BrandRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/repository/impl/LaptopRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/service/BrandService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/service/LaptopService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/service/impl/BrandServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/service/impl/LaptopServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/layout/item.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/page/quan-ly-san-pham.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/page/view-chi-tiet-sp.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlyhoadon/repository/PmLaptopRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlyhoadon/service/PmLaptopService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlysanpham/controller/PmLaptopController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlysanpham/entity/request/PnLaptopReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlysanpham/mapper/PmLaptopMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlysanpham/repository/PmBrandRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlysanpham/repository/PmLaptopRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlysanpham/repository/impl/PmBrandRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlysanpham/repository/impl/PmLaptopRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlysanpham/service/PmBrandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlysanpham/service/PmLaptopService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlysanpham/service/impl/PmBrandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlysanpham/service/impl/PmLaptopServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlyuser/repository/PmLaptopRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/core/quanlyuser/service/PmLaptopService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/entity/RoleAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/repository/RoleAccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/repository/RoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/repository/impl/RoleAccountRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/utilities/LaptopDetailStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/utilities/UtilClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/page/view-quan-ly.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/quanlysp/view-save-update-laptop.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dd779738-87bf-4a91-92b8-132905c1d1b3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/dd779738-87bf-4a91-92b8-132905c1d1b3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dd779738-87bf-4a91-92b8-132905c1d1b3/storage_v2/_src_/database/ASSJAVA4.kXilGA/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/dd779738-87bf-4a91-92b8-132905c1d1b3/storage_v2/_src_/database/ASSJAVA4.kXilGA/schema/dbo.sYMBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/controller/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/controller/QanLySanPhamController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/entity/Laptop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/entity/Laptop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/repository/BrandRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/repository/BrandRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/entity/LaptopDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/entity/LaptopDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/repository/LaptopRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/repository/LaptopRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/utilities/BillStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/utilities/BillStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/utilities/BrandStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/utilities/BrandStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/utilities/LaptopStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/utilities/LaptopStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/utilities/StatusAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/utilities/StatusAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/layout/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/layout/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/repository/impl/BrandRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/repository/impl/BrandRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/repository/impl/LaptopRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/repository/impl/LaptopRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/service/LaptopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/service/LaptopService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/service/impl/BrandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/service/impl/BrandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/service/impl/LaptopServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/service/impl/LaptopServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/utilities/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/utilities/HibernateUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/page/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/page/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/page/quan-ly-san-pham.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/quanlysp/quan-ly-san-pham.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/page/view-san-pham.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/page/view-san-pham.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +62,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -87,11 +103,15 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JAva4/demo1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JAva4/AssignmetJava4/src/main/java/com/example/assignmetjava4/core/quanlyuser&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -102,30 +122,27 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAva4\AssignmetJava4\src\main\java\com\example\assignmetjava4\core\quanlyuser" />
+      <recent name="D:\JAva4\AssignmetJava4\src\main\java\com\example\assignmetjava4\core\quanlyhoadon" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAva4\AssignmetJava4\src\main\webapp\views\quanlysp" />
+    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.assignmetjava4.utilities" />
+    </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.7">
-    <configuration name="AccountRepositoryImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.assignmetjava4.repository.impl.AccountRepositoryImpl" />
-      <module name="AssignmetJava4" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.assignmetjava4.repository.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HibernateUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.assignmetjava4.utilities.HibernateUtil" />
-      <module name="AssignmetJava4" />
+      <option name="MAIN_CLASS_NAME" value="com.example.lab5.util.HibernateUtil" />
+      <module name="lab5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.assignmetjava4.utilities.*" />
+          <option name="PATTERN" value="com.example.lab5.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,6 +156,32 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.assignmetjava4.repository.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LaptopServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.assignmetjava4.service.impl.LaptopServiceImpl" />
+      <module name="AssignmetJava4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.assignmetjava4.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.example.assignmetjava4.utilities.HibernateUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.assignmetjava4.utilities.HibernateUtil" />
+      <module name="AssignmetJava4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.assignmetjava4.utilities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -236,18 +279,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.LaptopServiceImpl" />
+      <item itemvalue="Application.com.example.assignmetjava4.utilities.HibernateUtil" />
       <item itemvalue="Application.LaptopRepositoryImpl" />
-      <item itemvalue="Application.AccountRepositoryImpl" />
       <item itemvalue="Application.HibernateUtil" />
       <item itemvalue="JavaScript Debug.login.jsp" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.7" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LaptopRepositoryImpl" />
+        <item itemvalue="Application.LaptopServiceImpl" />
+        <item itemvalue="Application.com.example.assignmetjava4.utilities.HibernateUtil" />
         <item itemvalue="Application.HibernateUtil" />
+        <item itemvalue="Application.LaptopRepositoryImpl" />
         <item itemvalue="JavaScript Debug.login.jsp" />
-        <item itemvalue="Application.AccountRepositoryImpl" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +313,15 @@
       <workItem from="1679651565040" duration="4414000" />
       <workItem from="1679674149971" duration="8731000" />
       <workItem from="1680015602645" duration="4635000" />
-      <workItem from="1680021822953" duration="855000" />
+      <workItem from="1680021822953" duration="8382000" />
+      <workItem from="1680053703016" duration="1112000" />
+      <workItem from="1680104068907" duration="3307000" />
+      <workItem from="1680181626761" duration="738000" />
+      <workItem from="1680189090781" duration="9222000" />
+      <workItem from="1680274593932" duration="14309000" />
+      <workItem from="1680330517713" duration="5054000" />
+      <workItem from="1680349432718" duration="5444000" />
+      <workItem from="1680362311055" duration="15190000" />
     </task>
     <task id="LOCAL-00001" summary="done">
       <created>1679588977267</created>
@@ -284,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679649005866</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="done">
+      <created>1680022690058</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680022690058</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +364,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="done" />
     <option name="LAST_COMMIT_MESSAGE" value="done" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/assignmetjava4/controller/HomeServlet.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
