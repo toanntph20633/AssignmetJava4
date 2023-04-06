@@ -12,6 +12,7 @@
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+          <script src="https://kit.fontawesome.com/6b6872c6dd.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -24,7 +25,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/trang-chu">Trang chủ ${username}</a>
+                    <a class="nav-link" aria-current="page" href="/trang-chu">Trang chủ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/gioi-thieu">Giới thiệu</a>
@@ -38,15 +39,22 @@
                         Tài khoản
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/thong-tin-tai-khoan">Thông tin tài khoản</a></li>
-                        <li><a class="dropdown-item" href="/gio-hang">Giỏ hàng của tôi</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <c:if test="${role.roleName == 'admin'}">
-                            <li><a class="dropdown-item" href="/quan-ly">Quản lý/a></li>
+                        <c:if test="${acc != null}">
+                            <li><a class="dropdown-item" href="/thong-tin-tai-khoan">Thông tin tài khoản</a></li>
+                            <li><a class="dropdown-item" href="/gio-hang">Giỏ hàng của tôi</a></li>
+                            <c:if test="${role.roleName == 'admin'}">
+                                <li><a class="dropdown-item" href="/quan-ly">Quản lý</a></li>
+                            </c:if>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/dang-xuat">Đăng xuất</a></li>
                         </c:if>
-                        <li><a class="dropdown-item" href="/dang-xuat">Đăng xuất</a></li>
+
+                        <c:if test="${acc == null}">
+                            <li><a class="dropdown-item" href="/dang-nhap">Đăng nhập</a></li>
+                        </c:if>
+
                     </ul>
                 </li>
             </ul>

@@ -26,8 +26,9 @@
                 <input type="text" class="form-control" name="laptopName" value="${laptop.laptopName}">
             </div>
             <div class="mb-3">
-                <label class="form-label">Mô tả</label>
-                <input type="text" class="form-control" name="description" value="${laptop.description}">
+                <label for="exampleFormControlTextarea1" class="form-label">Mô tả</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" >
+                    ${laptop.description}</textarea>
             </div>
             <div class="mb-3">
                 <label class="form-label">Giá bán</label>

@@ -1,6 +1,11 @@
 package com.example.assignmetjava4.controller;
 
+import com.example.assignmetjava4.core.themvaogiohang.repository.AsDetailShoppingCartRepository;
+import com.example.assignmetjava4.core.themvaogiohang.repository.impl.AsShoppingCartRepositoryImpl;
+import com.example.assignmetjava4.core.themvaogiohang.service.AsShoppingCartService;
+import com.example.assignmetjava4.core.themvaogiohang.service.impl.AsShoppingCartServiceImpl;
 import com.example.assignmetjava4.entity.Account;
+import com.example.assignmetjava4.entity.Customer;
 import com.example.assignmetjava4.service.AccountService;
 import com.example.assignmetjava4.service.LaptopService;
 import com.example.assignmetjava4.service.impl.AccountServiceImpl;
@@ -10,6 +15,7 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
+import java.util.Objects;
 
 @WebServlet(name = "HomeServlet", value = {
         "/trang-chu",
@@ -27,6 +33,7 @@ import java.io.IOException;
 public class HomeServlet extends HttpServlet {
     private static final AccountService ACCOUNT_SERVICE = new AccountServiceImpl();
     private static final LaptopService LAPTOP_SERVICE = new LaptopServiceImpl();
+    private static final AsShoppingCartService SHOPPING_CART_SERVICE = new AsShoppingCartServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -118,7 +125,13 @@ public class HomeServlet extends HttpServlet {
     private void khachHangInfo(HttpServletRequest request, HttpServletResponse response) {
     }
 
-    private void gioHang(HttpServletRequest request, HttpServletResponse response) {
+    private void gioHang(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Account account = (Account) request.getSession().getAttribute("acc");
+        if (Objects.nonNull(account)) {
+            request.setAttribute("listCart", SHOPPING_CART_SERVICE.getListGioHang(account.getCustomerId().getId()));
+            request.getRequestDispatcher("/views/page/gio-hang.jsp").forward(request, response);
+        }
+
     }
 
     private void trangChu(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

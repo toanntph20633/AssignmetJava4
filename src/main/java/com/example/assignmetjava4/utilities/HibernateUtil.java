@@ -9,6 +9,7 @@ import com.example.assignmetjava4.entity.Laptop;
 import com.example.assignmetjava4.entity.LaptopDetail;
 import com.example.assignmetjava4.entity.Role;
 import com.example.assignmetjava4.entity.RoleAccount;
+import com.example.assignmetjava4.entity.ShoppingCart;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -42,6 +43,7 @@ public class HibernateUtil {
         conf.addAnnotatedClass(LaptopDetail.class);
         conf.addAnnotatedClass(Role.class);
         conf.addAnnotatedClass(RoleAccount.class);
+        conf.addAnnotatedClass(ShoppingCart.class);
 
         ServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .applySettings(conf.getProperties()).build();
